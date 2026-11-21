@@ -1,9 +1,9 @@
-# Deploy Alex Trader 3.0
+# Deploy Zakie Trader 3.0
 
 ## Render deployment (web app + Node API)
 
 1. Sign in to Render and choose **New → Blueprint**.
-2. Connect GitHub and select `zacharieyab-prog/alex-trader`.
+2. Connect GitHub and select `zacharieyab-prog/zakie-trader`.
 3. Render reads `render.yaml`. Choose the free web-service plan and create the service.
 4. In the service's **Environment** settings, add:
    - `OPENAI_API_KEY`: your own OpenAI API key (keep it secret; never put it in frontend code or chat).
