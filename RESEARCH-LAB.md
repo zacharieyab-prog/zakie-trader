@@ -1,4 +1,4 @@
-# Alex Trader 3.0 — Historical Research Lab
+# Zakie Trader 3.0 — Historical Research Lab
 
 ## Safety
 - Historical research and demo/paper testing only.
