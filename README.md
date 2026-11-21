@@ -1,6 +1,6 @@
-# Alex Trader — Multi-Asset AI Signals & Smart Money Watch
+# Zakie Trader — Multi-Asset AI Signals & Smart Money Watch
 
-Alex Trader is a demo-mode, signals-only chart assistant with a cross-platform trader-event monitor. It does not connect to brokers, copy trades or place orders.
+Zakie Trader is a demo-mode, signals-only chart assistant with a cross-platform trader-event monitor. It does not connect to brokers, copy trades or place orders.
 
 ## Features
 - Upload PNG/JPG/WEBP chart screenshots (max 8 MB).
@@ -26,7 +26,7 @@ npm start
 Open http://localhost:3000. Keep secrets only in the server environment; never commit .env or place keys in browser JavaScript.
 
 ## Deploy on Render
-1. Create a Render Blueprint and connect `zacharieyab-prog/alex-trader`.
+1. Create a Render Blueprint and connect `zacharieyab-prog/zakie-trader`.
 2. Keep the web service on Free if desired.
 3. Add `OPENAI_API_KEY` and `TRADER_FEED_TOKEN` as secret environment variables.
 4. Deploy and check `/api/health`.
