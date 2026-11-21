@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: alex-trader
+    name: zakie-trader
     runtime: node
     plan: free
     buildCommand: npm install
