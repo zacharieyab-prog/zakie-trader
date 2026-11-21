@@ -1,4 +1,4 @@
-name: Alex Trader Research Lab
+name: Zakie Trader Research Lab
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - name: Check out Alex Trader
+      - name: Check out Zakie Trader
         uses: actions/checkout@v5
 
       - name: Set up Node.js
@@ -61,7 +61,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: alex-trader-research-${{ github.run_number }}
+          name: zakie-trader-research-${{ github.run_number }}
           path: |
             data/historical/
             data/reports/
