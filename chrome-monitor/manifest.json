@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Zakie Trader Monitor",
+  "version": "1.0.0",
+  "description": "User-started chart screenshot monitor for Zakie Trader. Signals only; no trading.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Zakie Trader Monitor"
+  }
+}
