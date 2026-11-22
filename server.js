@@ -7,6 +7,7 @@ const {runAgents}=require("./agents");
 const app=express(),PORT=process.env.PORT||3000;
 const upload=multer({storage:multer.memoryStorage(),limits:{fileSize:8*1024*1024},fileFilter:(req,file,cb)=>cb(null,["image/png","image/jpeg","image/webp"].includes(file.mimetype))});
 app.use(express.json({limit:"64kb"}));
+app.use((req,res,next)=>{const origin=req.headers.origin||"";if(origin.startsWith("chrome-extension://")||origin==="http://localhost:3000"||origin==="http://127.0.0.1:3000"){res.setHeader("Access-Control-Allow-Origin",origin);res.setHeader("Vary","Origin");res.setHeader("Access-Control-Allow-Methods","GET,POST,OPTIONS");res.setHeader("Access-Control-Allow-Headers","Content-Type");}if(req.method==="OPTIONS")return res.sendStatus(204);next();});
 app.use(express.static(__dirname));
 
 /* Cross-platform trade-feed receiver.
