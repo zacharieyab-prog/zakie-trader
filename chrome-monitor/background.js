@@ -21,7 +21,7 @@ async function capture(){
   if(!response.ok)throw new Error(result.error||"Analysis request failed");
   const signal=String(result.signal||"WAIT").toUpperCase();
   await setStatus(signal,result.reason||"");
-  if(signal==="HIGHER"||signal==="LOWER"){chrome.notifications.create({type:"basic",iconUrl:"icon.png",title:"Zakie Trader: "+signal,message:result.reason||"New chart signal. Confirm manually in demo mode."});}
+  if(signal==="HIGHER"||signal==="LOWER"){chrome.notifications.create({type:"basic",iconUrl:"icon.svg",title:"Zakie Trader: "+signal,message:result.reason||"New chart signal. Confirm manually in demo mode."});}
  }catch(e){await setStatus("ERROR",e.message);}
 }
 chrome.alarms.onAlarm.addListener(a=>{if(a.name===ALARM)capture();});
